@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter:400,700">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div>
+        <div class="header-dark">
+            <nav class="navbar navbar-dark navbar-expand-md navigation-clean-search">
+                <div class="container">
+					<a class="navbar-brand" href="index.html">Janak Bhanushali</a>
+					<button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse"id="navcol-1">
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item" role="presentation">
+							<a class="nav-link" href="media/JanakBhanushali-Resume.pdf" target="_blank">Download Resume</a>
+							</li>
+                            <li class="dropdown">
+							<a class="dropdown-toggle nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Blogs</a>
+                                <div class="dropdown-menu" role="menu">
+									<a class="dropdown-item" role="presentation" href="https://medium.com/nerd-for-tech/network-policy-based-routing-96e08d951b63" target="_blank">
+									Network — Policy Based Routing
+									</a>
+								</div>
+                            </li>
+							<li class="nav-item" role="presentation">
+							<a class="nav-link" href="https://www.linkedin.com/in/janakbhadra/" target="_blank"><i class="fa fa-linkedin"></i> LinkedIn</a>
+							</li>
+							<li class="nav-item" role="presentation">
+							<a class="nav-link" href="https://calendly.com/janakb" target="_blank"><i class="fa fa-calendar"></i> Schedule a Meeting</a>
+							</li>
+                        </ul>
+                </div>
+            </nav>
+
+            <div class="container hero">
+                <div class="row">
+					<a class="m-story" href="https://medium.com/nerd-for-tech/network-policy-based-routing-96e08d951b63">Network — Policy Based Routing</a>
+                </div>
+            </div>
+        </div>
+    </div>
+	<script async src="https://static.medium.com/embed.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+	<script>
+	$('#play-video').on('click', function(e){
+		e.preventDefault();
+		$('#video-overlay').addClass('open');
+		$("#video-overlay")
+			.append('<iframe width="90%" height="100%" src="media/Janak_Bhanushali_Resume_Video.mp4" frameborder="0" allow="accelerometer; autoplay=1; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
+	});
+
+	$('.video-overlay, .video-overlay-close').on('click', function(e){
+	  e.preventDefault();
+	  close_video();
+	});
+
+	$(document).keyup(function(e){
+	  if(e.keyCode === 27) { close_video(); }
+	});
+	
+	function close_video() {
+		$('.video-overlay.open').removeClass('open').find('iframe').remove();
+	};
+
+	</script>
+</body>
+
+</html>
